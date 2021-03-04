@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>GmailLike</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<% content_for :navbar do %>
+  <%= render partial: "shared/navbar" %>
+<% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<% content_for :jumbotron do %>
+  <%= render partial: "shared/jumbotron" %>
+<% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<% content_for :alerts do %>
+  <%= render partial: "shared/alerts" %>
+<% end %>
+
+<% content_for :main do %>
+  <%= content_for?(:application) ? yield(:application) : yield %>
+<% end %>
+
+<% content_for :footer do %>
+  <%= render partial: "shared/footer" %>
+<% end %>
+
+<%= render template: "layouts/main" %>
