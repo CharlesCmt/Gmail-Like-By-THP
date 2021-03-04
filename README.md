@@ -17,5 +17,5 @@ Things you may want to cover:
 - `rails db:migrate db:seed`
 * How to run the test suite
 - `rails server`
-- or check out our deployment from heroku as : //link
+- or check out our deployment from heroku as : [//link](https://fakegmaillike.herokuapp.com/)
 * ...
